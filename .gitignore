@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+Brain_Tumor_Dataset/
+encrypted-images/
