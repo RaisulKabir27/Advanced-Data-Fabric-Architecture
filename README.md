@@ -1,100 +1,109 @@
-# An Advanced Data Fabric Architecture Leveraging Homomorphic Encryption and Federated Learning
+# Privacy-Preserving Medical Image Analysis
 
-Implementation and experimental code for an advanced data fabric architecture leveraging **homomorphic encryption** and **federated learning** for privacy-preserving medical image analysis.
+An implementation of a privacy-preserving medical image analysis system combining **Federated Learning (FL)** with **Homomorphic Encryption (HE)**.
 
 ## Overview
 
-This repository contains the implementation and experimental notebooks developed for the thesis:
+This project explores how medical image analysis can be performed while reducing the need to expose sensitive medical data.
 
-> **An Advanced Data Fabric Architecture Leveraging Homomorphic Encryption and Federated Learning**
+The implementation combines:
 
-The work explores privacy-preserving machine learning for medical image analysis by combining **federated learning** with **homomorphic encryption**. The repository includes code for data preprocessing, model experimentation, image cryptography, and supporting cryptographic operations.
+- **Federated Learning** for distributed model training
+- **Homomorphic Encryption** for protecting data during computation
+- **Medical image analysis** using a brain tumor image dataset
+- Encryption and decryption components implemented in Python
+- Machine learning experiments on encrypted and unencrypted data
 
-## Repository Contents
+The project includes the implementation, preprocessing notebooks, encryption components, and experimental outputs used to investigate privacy-preserving medical image analysis.
 
-| File | Description |
+## Project Structure
+
+```text
+.
+├── DataPreprocessingAndMLModelRun.ipynb
+├── HomomorphicEncryptionOfDataset.ipynb
+├── ModelOnUnencryptedData.ipynb
+├── ImageCryptography.py
+├── ModularArithmetic.py
+├── Paillier.py
+├── RabinMiller.py
+├── public_key.txt
+├── Encrypted output.png
+├── Unencryped output.png
+├── loglosspng.png
+├── .gitignore
+└── .gitattributes
+```
+
+## Main Components
+
+### Federated Learning
+
+The project investigates a distributed learning setup where model training can be performed without directly centralizing the underlying medical image data.
+
+### Homomorphic Encryption
+
+Homomorphic encryption components are implemented in Python to support computation over protected data.
+
+The repository includes an implementation of the **Paillier cryptosystem**, together with supporting modular arithmetic and primality-testing components.
+
+### Medical Image Analysis
+
+The experiments use brain tumor medical images to investigate machine learning on protected data.
+
+The original datasets are **not included in this repository** because of their size. They must be obtained separately before reproducing the experiments.
+
+## Technologies
+
+- Python
+- Jupyter Notebook
+- Federated Learning
+- Homomorphic Encryption
+- Paillier Cryptosystem
+- Medical Image Analysis
+- Machine Learning
+
+## Notebooks
+
+| Notebook | Purpose |
 |---|---|
-| `DataPreprocessingAndMLModelRun.ipynb` | Data preprocessing and machine-learning experimentation |
-| `HomomorphicEncryptionOfDataset.ipynb` | Experiments involving homomorphic encryption of the dataset |
-| `ModelOnUnencryptedData.ipynb` | Model experimentation using unencrypted data |
-| `ImageCryptography.py` | Image-related cryptographic operations |
-| `Paillier.py` | Paillier cryptosystem implementation |
-| `RabinMiller.py` | Rabin–Miller primality-testing implementation |
-| `ModularArithmetic.py` | Supporting modular arithmetic operations |
-| `public_key.txt` | Public-key material used by the experiments |
-| `Encrypted output.png` | Example encrypted-image output |
-| `Unencryped output.png` | Example unencrypted-image output |
-| `loglosspng.png` | Experimental model/loss visualization |
+| `DataPreprocessingAndMLModelRun.ipynb` | Data preprocessing and machine learning experiments |
+| `HomomorphicEncryptionOfDataset.ipynb` | Encryption-related experiments |
+| `ModelOnUnencryptedData.ipynb` | Experiments using unencrypted data |
 
-## Methodology
+## Encryption Implementation
 
-The implementation investigates a privacy-preserving workflow for medical image analysis incorporating cryptographic protection and federated learning.
+The repository contains Python implementations for the cryptographic components:
 
-The repository includes experimental components for:
+- `Paillier.py` — Paillier homomorphic encryption
+- `ModularArithmetic.py` — modular arithmetic operations
+- `RabinMiller.py` — primality testing
+- `ImageCryptography.py` — image encryption-related functionality
 
-- Medical image data preprocessing
-- Machine-learning model experimentation
-- Federated learning
-- Homomorphic encryption
-- Image encryption and decryption
-- Paillier cryptosystem operations
-- Modular arithmetic and primality testing
-- Comparison of encrypted and unencrypted image processing
+## Experimental Outputs
+
+The repository includes selected output files generated during the experiments, including:
+
+- Encrypted and unencrypted image examples
+- Model loss visualization
 
 ## Dataset
 
-The original development repository contained medical image datasets and generated encrypted-image data. These large datasets are **not included in this repository** to keep the GitHub repository lightweight.
+The medical image datasets used during development are intentionally excluded from this repository.
 
-The notebooks and scripts therefore require the appropriate dataset files to be obtained and configured separately before reproducing the experiments.
-
-## Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/RaisulKabir27/Advanced-Data-Fabric-Architecture.git
-cd Advanced-Data-Fabric-Architecture
-```
-
-### 2. Install dependencies
-
-The exact dependencies may vary by notebook or experiment. Install the Python packages required by the corresponding notebook/script before execution.
-
-### 3. Prepare the dataset
-
-Obtain the required medical image dataset separately and place it in the directory structure expected by the notebooks.
-
-### 4. Run the experiments
-
-The main experimental workflow can be explored through:
+The `.gitignore` file excludes the local dataset directories:
 
 ```text
-DataPreprocessingAndMLModelRun.ipynb
-HomomorphicEncryptionOfDataset.ipynb
-ModelOnUnencryptedData.ipynb
+Brain_Tumor_Dataset/
+encrypted-images/
 ```
 
-The Python cryptographic modules can also be used independently or together with the notebooks.
+To reproduce the experiments, obtain the required dataset separately and place it in the expected directory structure.
 
-## Research Focus
+## Purpose
 
-- Privacy-Preserving Machine Learning
-- Federated Learning
-- Homomorphic Encryption
-- Medical Image Analysis
-- Applied Cryptography
-- Secure Data Processing
-
-## Notes
-
-This repository contains research and experimental code associated with the thesis work. Dataset files are intentionally excluded from the repository.
+The project demonstrates an implementation-oriented approach to combining privacy-preserving techniques with medical image analysis, with a focus on the practical use of **federated learning and homomorphic encryption**.
 
 ## Author
 
 **Raisul Kabir News**
-
-## Citation
-
-If you use this implementation or build upon this work, please cite the associated thesis/research work:
-
-> **An Advanced Data Fabric Architecture Leveraging Homomorphic Encryption and Federated Learning**
